@@ -46,7 +46,6 @@ generic configuration Msp430UsciSpiB0C() {
   provides {
     interface Resource;
     interface SpiPacket;
-    interface SpiBlock;
     interface SpiByte;
     interface Msp430UsciError;
   }
@@ -61,7 +60,6 @@ implementation {
 
   components Msp430UsciSpiB0P as SpiC;
   SpiPacket = SpiC.SpiPacket[CLIENT_ID];
-  SpiBlock  = SpiC.SpiBlock;
   SpiByte   = SpiC.SpiByte;
   Msp430UsciError = SpiC.Msp430UsciError;
 
